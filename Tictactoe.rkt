@@ -6,10 +6,14 @@
 ;; Funcion que Detecta Ganador
 ;; Matriz de ejemlo (( x x x )( x x x )( x x x ))
 ;; (check_Winner  '(( x x x )( x x x )(x x x))   )
+;; (traspuesta '((1 2 3)(A B C)(a b c)))
 
 (define (check_Winner matrix)
-  (check_largo matrix)
-               )
+  (cond
+    ((not (equal? (check_largo matrix)#f)) (check_largo matrix))
+    ((not (equal? (check_largo (traspuesta matrix))#f)) (check_largo (traspuesta matrix)))
+    (else #f)
+  ))
 
 
 (define (check_largo matrix)
@@ -26,4 +30,26 @@
     ((equal? ele (car lista)) (check_largo_aux (cdr lista) ele))
     (else #f)))
                           
-                   
+;; Genera la traspuesta de una matriz
+
+(define (traspuesta matrix)
+  (cond
+    ((null? matrix)'())
+    ((null? (car matrix))'())
+
+    (else (append (list(traspuesta_aux matrix)) (traspuesta (corta_matrix matrix)))
+     )))
+
+(define (corta_matrix matrix)
+  (cond
+    ((null? matrix)'())
+    ((null? (car matrix))'())
+    (else (append (list(cdr(car matrix)))(corta_matrix (cdr matrix)) ))))
+  
+
+(define (traspuesta_aux matrix)
+  (cond
+    ((null? matrix)'())
+    ((null? (car matrix))'())
+   
+    (else (append (list(car(car matrix))) (traspuesta_aux (cdr matrix) )))))
