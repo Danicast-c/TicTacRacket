@@ -1211,6 +1211,9 @@
 		((and (= column 10) (= row 10))
 		(send frame show #t)
 		)
+		((or (> column 10) (> row 10))
+		'(Entry error. Grid must be at most 10x10)
+		)
 	)
 )
 
