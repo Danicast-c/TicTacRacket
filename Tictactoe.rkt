@@ -6,8 +6,8 @@
                (7 8 9)))
 
 (define testh '((1 2 3 4 5)
-               (6 7 8 9)
-               (10 11 12 13)))
+               (6 7 8 9 10)
+               (11 12 13 14 15)))
 
 (define testv '((1 2 3)
                (4 5 6)
@@ -92,6 +92,8 @@
 
 (define (getDiagonals matrix)
   (cond
+    ((< (length matrix) (length (car matrix))) (getDiagonalsIrregularH matrix 0 (length (car matrix)) (length matrix)))
+    ((> (length matrix) (length (car matrix))) (getDiagonalsIrregularV matrix 0 (length (car matrix)) (length matrix)))
    ((equal? (length matrix) (length (car matrix))) (getDiagonalsRegular matrix (length matrix)))
    )
   )
@@ -103,5 +105,16 @@
     )
   )
 
-;(define (getDiagonalsIrregular matrix len)
-;  (
+(define (getDiagonalsIrregularH matrix index lenx leny)
+  (cond
+    ((< lenx (+ index leny)) '())
+    (else (cons (getDiagonalsRegular matrix leny) (getDiagonalsIrregularH (corta_matrix matrix) (+ index 1) lenx leny)))
+    )
+  )
+
+(define (getDiagonalsIrregularV matrix index lenx leny)
+  (cond
+    ((< leny (+ index lenx)) '())
+    (else (cons (getDiagonalsRegular matrix lenx) (getDiagonalsIrregularV (cdr matrix) (+ index 1) lenx leny)))
+    )
+  )
