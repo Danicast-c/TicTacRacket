@@ -100,7 +100,7 @@
   (cond
     ((< (length matrix) (length (car matrix))) (getDiagonalsIrregularH matrix 0 (length (car matrix)) (length matrix)))
     ((> (length matrix) (length (car matrix))) (getDiagonalsIrregularV matrix 0 (length (car matrix)) (length matrix)))
-   ((equal? (length matrix) (length (car matrix))) (getDiagonalsRegular matrix (length matrix)))
+   ((equal? (length matrix) (length (car matrix))) (list (getDiagonalsRegular matrix (length matrix))))
    )
   )
 
