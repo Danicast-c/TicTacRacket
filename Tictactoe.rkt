@@ -34,6 +34,8 @@
   (cond
     ((not (equal? (check_largo matrix)#f)) (check_largo matrix))
     ((not (equal? (check_largo (traspuesta matrix))#f)) (check_largo (traspuesta matrix)))
+    ((not (equal? (check_largo (getDiagonals matrix))#f)) (check_largo (getDiagonals matrix)))
+    ((not (equal? (check_largo (getInvDiagonals matrix))#f)) (check_largo (getInvDiagonals matrix)))
     (else #f)
   ))
 
