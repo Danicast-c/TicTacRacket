@@ -21,6 +21,18 @@
                    (11 12 13 14 15)
                    (16 17 18 19 20)))
 
+
+(define nt '((-1 1 0)
+            (0 1 0)
+            (1 0 0))
+  )
+
+(define nt2 '((0 1 0 -1 1)
+            (1 1 0 -1 0)
+            (0 0 0 0 0)
+            (1 0 1 -1 0))
+  )
+
 ;; Funcion que Detecta Ganador
 ;; Matriz de ejemlo (( x x x )( x x x )( x x x ))
 ;; (check_Winner  '(( x x x )( x x x )(x x x))   )
@@ -118,8 +130,8 @@
   (cond
     ((< lenx (+ index leny)) '())
     (else (cons (getDiagonalsRegular matrix leny) (getDiagonalsIrregularH (corta_matrix matrix) (+ index 1) lenx leny)))
-    )
   )
+)
 
 (define (getDiagonalsIrregularV matrix index lenx leny)
   (cond
@@ -127,3 +139,85 @@
     (else (cons (getDiagonalsRegular matrix lenx) (getDiagonalsIrregularV (cdr matrix) (+ index 1) lenx leny)))
     )
  )
+
+(define (getEmptySpaces matrix)
+  (cond
+    ((empty? matrix) '())
+    (else (getEmptySpacesAux matrix 0 0 (length (car matrix)) (length matrix) '()))
+  )
+)
+
+(define (getEmptySpacesAux matrix i j lenx leny results)
+  (cond
+    ((< leny (+ i 1)) '())
+    ((< lenx (+ j 1)) (getEmptySpacesAux matrix (+ i 1) 0 lenx leny results))
+    ((equal? (getAtIndex matrix i j) 0) (cons (cons i j) (getEmptySpacesAux matrix i (+ j 1) lenx leny results)))
+    (else (getEmptySpacesAux matrix i (+ j 1) lenx leny results))
+  )
+)
+
+(define (horizontalScore matrix i)
+  (horizontalScoreAux matrix i 0 (length (car matrix)))
+)
+
+(define (horizontalScoreAux matrix i j lenx)
+  (cond
+    ((< lenx (+ j 1)) 0)
+    (else (+ (getAtIndex matrix i j) (horizontalScoreAux matrix i (+ 1 j) lenx)))
+  )
+)
+
+(define (verticalScore matrix j)
+  (horizontalScoreAux (traspuesta matrix) j 0 (length matrix))
+)
+
+(define (checkViability matrix i j)
+  (cond
+    ((equal? (horizontalScore matrix i) (- (length (car matrix)) 1)) -9999)
+    ((equal? (verticalScore matrix j) (- (length matrix) 1)) -9999)
+    (else (+ (horizontalScore matrix i) (verticalScore matrix j)))
+  )
+)
+
+
+(define (scoreViability matrix)
+  (qs (scoreViabilityAux matrix (getEmptySpaces matrix)))
+)
+
+(define (scoreViabilityAux matrix spaces)
+  (cond
+    ((empty? spaces) '())
+    (else (cons (list (checkViability matrix (caar spaces) (cdar spaces)) (caar spaces) (cdar spaces)) (scoreViabilityAux matrix (cdr spaces))))
+  )
+)
+
+
+
+(define (qs lista)
+  (cond
+    ((null? lista) '())
+    (else (append (qs (quicksort_menor (cdr lista) (caar lista)))  (list (car lista)) (qs (quicksort_mayor (cdr lista) (caar lista)))))
+    )
+  )
+(define (quicksort_mayor lista pivote)
+  (cond
+    ((null? lista) '())
+    ((< pivote (caar lista)) (cons (car lista) (quicksort_mayor (cdr lista) pivote)))
+    (else (quicksort_mayor (cdr lista) pivote))
+    )
+  )
+
+(define (quicksort_menor lista pivote)
+  (cond
+    ((null? lista) '())
+    ((>= pivote (caar lista)) (cons (car lista) (quicksort_menor (cdr lista) pivote)))
+    (else (quicksort_menor (cdr lista) pivote))
+    )
+)
+
+(define (nextCpuMove matrix)
+  (cdar (scoreViability matrix))
+)
+
+
+(cons (nextCpuMove nt2) )
