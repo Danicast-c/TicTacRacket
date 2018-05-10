@@ -18,6 +18,19 @@
                    [label "TicTacRacket"]
                    [stretchable-width #t]
                    [stretchable-height #t]))
+
+; Results of the match
+(define frameWinner (new frame%
+                   [label "Match Result"]
+                   [stretchable-width #t]
+                   [stretchable-height #t]))
+
+(define panelResult (new horizontal-panel% [parent frameWinner]
+				     [min-height 100]
+                                     [alignment '(center center)]))
+
+; Add a text field to the dialog
+(define resultMessage (new message% [parent panelResult] [label "This is an easter egg. If you see this, then you shouldn't"]))
  
 ; Add a horizontal panel to the frame, with centering for buttons
 (define panel0 (new horizontal-panel% [parent frame]
@@ -1377,9 +1390,16 @@
           ))
 
 (define (winner num)
-  num
-
-  )
+	(cond 	((equal? num 1)
+		(send resultMessage set-label "				Jugador es el ganador")
+		)
+		((equal? num -1)
+		(send resultMessage set-label "				Computadora es el ganador")
+		)
+	)
+	(send frame show #f)
+	(send frameWinner show #t)
+)
 
 (define (changeRow row column value oldMatrix newMatrix)
 	(cond 	((> row 0)
