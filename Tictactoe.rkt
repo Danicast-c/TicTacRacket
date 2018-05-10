@@ -2,7 +2,8 @@
 ;; about the language level of this file in a form that our tools can easily process.
 #reader(lib "htdp-advanced-reader.ss" "lang")((modname Tictactoe) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
 
-
+;;Importar Interfaz
+(require "interface.rkt")
 ;; Funcion que Detecta Ganador
 ;; Matriz de ejemlo (( x x x )( x x x )( x x x ))
 ;; (check_Winner  '(( x x x )( x x x )(x x x))   )
@@ -53,3 +54,5 @@
     ((null? (car matrix))'())
    
     (else (append (list(car(car matrix))) (traspuesta_aux (cdr matrix) )))))
+
+;; Genera las diagonales de la matriz

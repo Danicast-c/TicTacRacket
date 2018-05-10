@@ -1085,7 +1085,6 @@
   
 
 ; Initialize the interface
-(provide TTT)
 (define (TTT column row)
 	(cond 	((or (< column 3) (< row 3))
 		'(Entry error. Grid must be at least 3x3)
