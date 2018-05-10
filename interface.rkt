@@ -1366,8 +1366,20 @@
 
 (define (replaceInMatrix row column value)
 	(set! matrix (changeRow row column value matrix '()))
-	(pretty-print (check_Winner matrix))
-)
+	(search_Winner matrix))
+
+
+(define (search_Winner matrix)
+        (pretty-print (check_Winner matrix))
+        (cond
+          ((equal? (check_Winner matrix) 1) (winner 1))
+          ((equal? (check_Winner matrix) -1) (winner -1))
+          ))
+
+(define (winner num)
+  num
+
+  )
 
 (define (changeRow row column value oldMatrix newMatrix)
 	(cond 	((> row 0)
