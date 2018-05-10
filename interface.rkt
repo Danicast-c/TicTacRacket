@@ -1,5 +1,7 @@
 #lang racket/gui
 
+(require "Tictactoe.rkt")
+
 (define matrix '((0 0 0 0 0 0 0 0 0 0)
 		(0 0 0 0 0 0 0 0 0 0)
 		(0 0 0 0 0 0 0 0 0 0)
@@ -1196,7 +1198,6 @@
   
 
 ; Initialize the interface
-(provide TTT)
 (define (TTT column row)
 	(cond 	((or (< column 3) (< row 3))
 		'(Entry error. Grid must be at least 3x3)
@@ -1365,6 +1366,7 @@
 
 (define (replaceInMatrix row column value)
 	(set! matrix (changeRow row column value matrix '()))
+	(pretty-print (check_Winner matrix))
 )
 
 (define (changeRow row column value oldMatrix newMatrix)

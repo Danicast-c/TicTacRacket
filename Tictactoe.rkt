@@ -1,8 +1,4 @@
-;; The first three lines of this file were inserted by DrRacket. They record metadata
-;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-advanced-reader.ss" "lang")((modname Tictactoe) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
-;;Importar Interfaz
-(require "interface.rkt")
+#lang racket/gui
 
 (define test '((1 2 3)
                (4 5 6)
@@ -29,6 +25,13 @@
 ;; Matriz de ejemlo (( x x x )( x x x )( x x x ))
 ;; (check_Winner  '(( x x x )( x x x )(x x x))   )
 ;; (traspuesta '((1 2 3)(A B C)(a b c)))
+
+(provide check_Winner)
+(provide getInvDiagonals)
+(provide getDiagonals)
+(provide traspuesta)
+(provide check_largo)
+
 
 (define (check_Winner matrix)
   (cond
@@ -123,4 +126,4 @@
     ((< leny (+ index lenx)) '())
     (else (cons (getDiagonalsRegular matrix lenx) (getDiagonalsIrregularV (cdr matrix) (+ index 1) lenx leny)))
     )
-  )
+ )
