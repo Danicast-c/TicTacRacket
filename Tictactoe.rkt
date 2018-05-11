@@ -1,8 +1,8 @@
 #lang racket/gui
 
-(define test '((1 2 3)
-               (4 5 6)
-               (7 8 9)))
+(define test '((0 0 1)
+               (0 1 0)
+               (0 -1 0)))
 
 
 (define testh '((1 2 3 4 5)
@@ -32,6 +32,7 @@
             (0 0 1 0 0)
             (1 0 1 0 0))
   )
+
 
 ;; Funcion que Detecta Ganador
 ;; Matriz de ejemlo (( x x x )( x x x )( x x x ))
@@ -220,12 +221,6 @@
   (cdar (scoreViability matrix))
 )
 
-
-(define (getInvDiagonalsIndex matrix)
-  (getDiagonalsIndex (inverseMatrix matrix))
-  )
-
-
 (define (getDiagonalsIndex matrix)
   (cond
     ((< (length matrix) (length (car matrix))) (getDiagonalsIndexIrregularH matrix 0 (length (car matrix)) (length matrix)))
@@ -256,7 +251,7 @@
  )
 
 (define (diagonalScoreInv matrix)
-  (diagonalScoreAux matrix (getInvDiagonals matrix) (getInvDiagonalsIndex matrix))
+  (diagonalScoreAux matrix (getInvDiagonals matrix) (inverseDiagonalsIndexes matrix (getDiagonalsIndex matrix)))
 )
 
 (define (diagonalScore matrix)
@@ -297,5 +292,21 @@
       (caar scores)
     )
     (else (totalDiagonalScoreAux (cdr scores) i j))
+  )
+)
+
+
+
+(define (inverseDiagonalsIndexes matrix indexes)
+  (cond
+    ((empty? indexes) '())
+    (else (cons (inverseDiagonalsIndexAux matrix (car indexes)) (inverseDiagonalsIndexes matrix (cdr indexes))))
+  )
+)
+
+(define (inverseDiagonalsIndexAux matrix indexes)
+   (cond
+    ((empty? indexes) '())
+    (else (cons (cons (caar indexes) (- (length (car matrix)) (cdar indexes) 1)) (inverseDiagonalsIndexAux matrix (cdr indexes))))
   )
 )
