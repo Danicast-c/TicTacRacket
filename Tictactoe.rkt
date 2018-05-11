@@ -43,6 +43,7 @@
 (provide getDiagonals)
 (provide traspuesta)
 (provide check_largo)
+(provide nextCpuMove)
 
 
 (define (check_Winner matrix)
@@ -218,6 +219,3 @@
 (define (nextCpuMove matrix)
   (cdar (scoreViability matrix))
 )
-
-
-(cons (nextCpuMove nt2) )
