@@ -176,7 +176,7 @@
   (cond
     ((equal? (horizontalScore matrix i) (- (length (car matrix)) 1)) -9999)
     ((equal? (verticalScore matrix j) (- (length matrix) 1)) -9999)
-    (else (+ (horizontalScore matrix i) (verticalScore matrix j)))
+    (else (+ (horizontalScore matrix i) (verticalScore matrix j) (totalDiagonalScore matrix i j)))
   )
 )
 
