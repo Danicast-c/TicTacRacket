@@ -50,7 +50,8 @@
                          (send button00 set-label "O")
                          (send button00 enable #f)
 			 (replaceInMatrix 0 0 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
   
 (define button01 (new button% [parent panel0]
      [label ""]
@@ -62,7 +63,8 @@
                          (send button01 set-label "O")
                          (send button01 enable #f)
 			 (replaceInMatrix 0 1 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button02 (new button% [parent panel0]
      [label ""]
@@ -74,7 +76,8 @@
                          (send button02 set-label "O")
                          (send button02 enable #f)
 			 (replaceInMatrix 0 2 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button03 (new button% [parent panel0]
      [label ""]
@@ -86,7 +89,8 @@
                          (send button03 set-label "O")
                          (send button03 enable #f)
 			 (replaceInMatrix 0 3 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button04 (new button% [parent panel0]
      [label ""]
@@ -98,7 +102,8 @@
                          (send button04 set-label "O")
                          (send button04 enable #f)
 			 (replaceInMatrix 0 4 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button05 (new button% [parent panel0]
      [label ""]
@@ -110,7 +115,8 @@
                          (send button05 set-label "O")
                          (send button05 enable #f)
 			 (replaceInMatrix 0 5 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button06 (new button% [parent panel0]
      [label ""]
@@ -122,7 +128,8 @@
                          (send button06 set-label "O")
                          (send button06 enable #f)
 			 (replaceInMatrix 0 6 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button07 (new button% [parent panel0]
      [label ""]
@@ -134,7 +141,8 @@
                          (send button07 set-label "O")
                          (send button07 enable #f)
 			 (replaceInMatrix 0 7 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button08 (new button% [parent panel0]
      [label ""]
@@ -146,7 +154,8 @@
                          (send button08 set-label "O")
                          (send button08 enable #f)
 			 (replaceInMatrix 0 8 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button09 (new button% [parent panel0]
      [label ""]
@@ -158,7 +167,8 @@
                          (send button09 set-label "O")
                          (send button09 enable #f)
 			 (replaceInMatrix 0 9 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 
 
@@ -178,7 +188,8 @@
                          (send button10 set-label "O")
                          (send button10 enable #f)
 			 (replaceInMatrix 1 0 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
   
 (define button11 (new button% [parent panel1]
      [label ""]
@@ -190,7 +201,8 @@
                          (send button11 set-label "O")
                          (send button11 enable #f)
 			 (replaceInMatrix 1 1 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button12 (new button% [parent panel1]
      [label ""]
@@ -202,7 +214,8 @@
                          (send button12 set-label "O")
                          (send button12 enable #f)
 			 (replaceInMatrix 1 2 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button13 (new button% [parent panel1]
      [label ""]
@@ -214,7 +227,8 @@
                          (send button13 set-label "O")
                          (send button13 enable #f)
 			 (replaceInMatrix 1 3 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button14 (new button% [parent panel1]
      [label ""]
@@ -226,7 +240,8 @@
                          (send button14 set-label "O")
                          (send button14 enable #f)
 			 (replaceInMatrix 1 4 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button15 (new button% [parent panel1]
      [label ""]
@@ -238,7 +253,8 @@
                          (send button15 set-label "O")
                          (send button15 enable #f)
 			 (replaceInMatrix 1 5 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button16 (new button% [parent panel1]
      [label ""]
@@ -250,7 +266,8 @@
                          (send button16 set-label "O")
                          (send button16 enable #f)
 			 (replaceInMatrix 1 6 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button17 (new button% [parent panel1]
      [label ""]
@@ -262,7 +279,8 @@
                          (send button17 set-label "O")
                          (send button17 enable #f)
 			 (replaceInMatrix 1 7 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button18 (new button% [parent panel1]
      [label ""]
@@ -274,7 +292,8 @@
                          (send button18 set-label "O")
                          (send button18 enable #f)
 			 (replaceInMatrix 1 8 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button19 (new button% [parent panel1]
      [label ""]
@@ -286,7 +305,8 @@
                          (send button19 set-label "O")
                          (send button19 enable #f)
 			 (replaceInMatrix 1 9 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 
 
@@ -306,7 +326,8 @@
                          (send button20 set-label "O")
                          (send button20 enable #f)
 			 (replaceInMatrix 2 0 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
   
 (define button21 (new button% [parent panel2]
      [label ""]
@@ -318,7 +339,8 @@
                          (send button21 set-label "O")
                          (send button21 enable #f)
 			 (replaceInMatrix 2 1 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button22 (new button% [parent panel2]
      [label ""]
@@ -330,7 +352,8 @@
                          (send button22 set-label "O")
                          (send button22 enable #f)
 			 (replaceInMatrix 2 2 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button23 (new button% [parent panel2]
      [label ""]
@@ -342,7 +365,8 @@
                          (send button23 set-label "O")
                          (send button23 enable #f)
 			 (replaceInMatrix 2 3 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button24 (new button% [parent panel2]
      [label ""]
@@ -354,7 +378,8 @@
                          (send button24 set-label "O")
                          (send button24 enable #f)
 			 (replaceInMatrix 2 4 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button25 (new button% [parent panel2]
      [label ""]
@@ -366,7 +391,8 @@
                          (send button25 set-label "O")
                          (send button25 enable #f)
 			 (replaceInMatrix 2 5 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button26 (new button% [parent panel2]
      [label ""]
@@ -378,7 +404,8 @@
                          (send button26 set-label "O")
                          (send button26 enable #f)
 			 (replaceInMatrix 2 6 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button27 (new button% [parent panel2]
      [label ""]
@@ -390,7 +417,8 @@
                          (send button27 set-label "O")
                          (send button27 enable #f)
 			 (replaceInMatrix 2 7 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button28 (new button% [parent panel2]
      [label ""]
@@ -402,7 +430,8 @@
                          (send button28 set-label "O")
                          (send button28 enable #f)
 			 (replaceInMatrix 2 8 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button29 (new button% [parent panel2]
      [label ""]
@@ -414,7 +443,8 @@
                          (send button29 set-label "O")
                          (send button29 enable #f)
 			 (replaceInMatrix 2 9 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 
 
@@ -434,7 +464,8 @@
                          (send button30 set-label "O")
                          (send button30 enable #f)
 			 (replaceInMatrix 3 0 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
   
 (define button31 (new button% [parent panel3]
      [label ""]
@@ -446,7 +477,8 @@
                          (send button31 set-label "O")
                          (send button31 enable #f)
 			 (replaceInMatrix 3 1 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button32 (new button% [parent panel3]
      [label ""]
@@ -458,7 +490,8 @@
                          (send button32 set-label "O")
                          (send button32 enable #f)
 			 (replaceInMatrix 3 2 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button33 (new button% [parent panel3]
      [label ""]
@@ -470,7 +503,8 @@
                          (send button33 set-label "O")
                          (send button33 enable #f)
 			 (replaceInMatrix 3 3 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button34 (new button% [parent panel3]
      [label ""]
@@ -482,7 +516,8 @@
                          (send button34 set-label "O")
                          (send button34 enable #f)
 			 (replaceInMatrix 3 4 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button35 (new button% [parent panel3]
      [label ""]
@@ -494,7 +529,8 @@
                          (send button35 set-label "O")
                          (send button35 enable #f)
 			 (replaceInMatrix 3 5 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button36 (new button% [parent panel3]
      [label ""]
@@ -506,7 +542,8 @@
                          (send button36 set-label "O")
                          (send button36 enable #f)
 			 (replaceInMatrix 3 6 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button37 (new button% [parent panel3]
      [label ""]
@@ -518,7 +555,8 @@
                          (send button37 set-label "O")
                          (send button37 enable #f)
 			 (replaceInMatrix 3 7 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button38 (new button% [parent panel3]
      [label ""]
@@ -530,7 +568,8 @@
                          (send button38 set-label "O")
                          (send button38 enable #f)
 			 (replaceInMatrix 3 8 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button39 (new button% [parent panel3]
      [label ""]
@@ -542,7 +581,8 @@
                          (send button39 set-label "O")
                          (send button39 enable #f)
 			 (replaceInMatrix 3 9 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 
 
@@ -562,7 +602,8 @@
                          (send button40 set-label "O")
                          (send button40 enable #f)
 			 (replaceInMatrix 4 0 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button41 (new button% [parent panel4]
      [label ""]
@@ -574,7 +615,8 @@
                          (send button41 set-label "O")
                          (send button41 enable #f)
 			 (replaceInMatrix 4 1 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button42 (new button% [parent panel4]
      [label ""]
@@ -586,7 +628,8 @@
                          (send button42 set-label "O")
                          (send button42 enable #f)
 			 (replaceInMatrix 4 2 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button43 (new button% [parent panel4]
      [label ""]
@@ -598,7 +641,8 @@
                          (send button43 set-label "O")
                          (send button43 enable #f)
 			 (replaceInMatrix 4 3 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button44 (new button% [parent panel4]
      [label ""]
@@ -610,7 +654,8 @@
                          (send button44 set-label "O")
                          (send button44 enable #f)
 			 (replaceInMatrix 4 4 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button45 (new button% [parent panel4]
      [label ""]
@@ -622,7 +667,8 @@
                          (send button45 set-label "O")
                          (send button45 enable #f)
 			 (replaceInMatrix 4 5 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button46 (new button% [parent panel4]
      [label ""]
@@ -634,7 +680,8 @@
                          (send button46 set-label "O")
                          (send button46 enable #f)
 			 (replaceInMatrix 4 6 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button47 (new button% [parent panel4]
      [label ""]
@@ -646,7 +693,8 @@
                          (send button47 set-label "O")
                          (send button47 enable #f)
 			 (replaceInMatrix 4 7 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button48 (new button% [parent panel4]
      [label ""]
@@ -658,7 +706,8 @@
                          (send button48 set-label "O")
                          (send button48 enable #f)
 			 (replaceInMatrix 4 8 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button49 (new button% [parent panel4]
      [label ""]
@@ -670,7 +719,8 @@
                          (send button49 set-label "O")
                          (send button49 enable #f)
 			 (replaceInMatrix 4 9 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 
 
@@ -690,7 +740,8 @@
                          (send button50 set-label "O")
                          (send button50 enable #f)
 			 (replaceInMatrix 5 0 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button51 (new button% [parent panel5]
      [label ""]
@@ -702,7 +753,8 @@
                          (send button51 set-label "O")
                          (send button51 enable #f)
 			 (replaceInMatrix 5 1 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button52 (new button% [parent panel5]
      [label ""]
@@ -714,7 +766,8 @@
                          (send button52 set-label "O")
                          (send button52 enable #f)
 			 (replaceInMatrix 5 2 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button53 (new button% [parent panel5]
      [label ""]
@@ -726,7 +779,8 @@
                          (send button53 set-label "O")
                          (send button53 enable #f)
 			 (replaceInMatrix 5 3 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button54 (new button% [parent panel5]
      [label ""]
@@ -738,7 +792,8 @@
                          (send button54 set-label "O")
                          (send button54 enable #f)
 			 (replaceInMatrix 5 4 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button55 (new button% [parent panel5]
      [label ""]
@@ -750,7 +805,8 @@
                          (send button55 set-label "O")
                          (send button55 enable #f)
 			 (replaceInMatrix 5 5 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button56 (new button% [parent panel5]
      [label ""]
@@ -762,7 +818,8 @@
                          (send button56 set-label "O")
                          (send button56 enable #f)
 			 (replaceInMatrix 5 6 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button57 (new button% [parent panel5]
      [label ""]
@@ -774,7 +831,8 @@
                          (send button57 set-label "O")
                          (send button57 enable #f)
 			 (replaceInMatrix 5 7 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button58 (new button% [parent panel5]
      [label ""]
@@ -786,7 +844,8 @@
                          (send button58 set-label "O")
                          (send button58 enable #f)
 			 (replaceInMatrix 5 8 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button59 (new button% [parent panel5]
      [label ""]
@@ -798,7 +857,8 @@
                          (send button59 set-label "O")
                          (send button59 enable #f)
 			 (replaceInMatrix 5 9 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 
 
@@ -818,7 +878,8 @@
                          (send button60 set-label "O")
                          (send button60 enable #f)
 			 (replaceInMatrix 6 0 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button61 (new button% [parent panel6]
      [label ""]
@@ -830,7 +891,8 @@
                          (send button61 set-label "O")
                          (send button61 enable #f)
 			 (replaceInMatrix 6 1 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button62 (new button% [parent panel6]
      [label ""]
@@ -842,7 +904,8 @@
                          (send button62 set-label "O")
                          (send button62 enable #f)
 			 (replaceInMatrix 6 2 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button63 (new button% [parent panel6]
      [label ""]
@@ -854,7 +917,8 @@
                          (send button63 set-label "O")
                          (send button63 enable #f)
 			 (replaceInMatrix 6 3 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button64 (new button% [parent panel6]
      [label ""]
@@ -866,7 +930,8 @@
                          (send button64 set-label "O")
                          (send button64 enable #f)
 			 (replaceInMatrix 6 4 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button65 (new button% [parent panel6]
      [label ""]
@@ -878,7 +943,8 @@
                          (send button65 set-label "O")
                          (send button65 enable #f)
 			 (replaceInMatrix 6 5 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button66 (new button% [parent panel6]
      [label ""]
@@ -890,7 +956,8 @@
                          (send button66 set-label "O")
                          (send button66 enable #f)
 			 (replaceInMatrix 6 6 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button67 (new button% [parent panel6]
      [label ""]
@@ -902,7 +969,8 @@
                          (send button67 set-label "O")
                          (send button67 enable #f)
 			 (replaceInMatrix 6 7 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button68 (new button% [parent panel6]
      [label ""]
@@ -914,7 +982,8 @@
                          (send button68 set-label "O")
                          (send button68 enable #f)
 			 (replaceInMatrix 6 8 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button69 (new button% [parent panel6]
      [label ""]
@@ -926,7 +995,8 @@
                          (send button69 set-label "O")
                          (send button69 enable #f)
 			 (replaceInMatrix 6 9 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 
 
@@ -946,7 +1016,8 @@
                          (send button70 set-label "O")
                          (send button70 enable #f)
 			 (replaceInMatrix 7 0 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button71 (new button% [parent panel7]
      [label ""]
@@ -958,7 +1029,8 @@
                          (send button71 set-label "O")
                          (send button71 enable #f)
 			 (replaceInMatrix 7 1 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button72 (new button% [parent panel7]
      [label ""]
@@ -970,7 +1042,8 @@
                          (send button72 set-label "O")
                          (send button72 enable #f)
 			 (replaceInMatrix 7 2 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button73 (new button% [parent panel7]
      [label ""]
@@ -982,7 +1055,8 @@
                          (send button73 set-label "O")
                          (send button73 enable #f)
 			 (replaceInMatrix 7 3 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button74 (new button% [parent panel7]
      [label ""]
@@ -994,7 +1068,8 @@
                          (send button74 set-label "O")
                          (send button74 enable #f)
 			 (replaceInMatrix 7 4 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button75 (new button% [parent panel7]
      [label ""]
@@ -1006,7 +1081,8 @@
                          (send button75 set-label "O")
                          (send button75 enable #f)
 			 (replaceInMatrix 7 5 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button76 (new button% [parent panel7]
      [label ""]
@@ -1018,7 +1094,8 @@
                          (send button76 set-label "O")
                          (send button76 enable #f)
 			 (replaceInMatrix 7 6 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button77 (new button% [parent panel7]
      [label ""]
@@ -1030,7 +1107,8 @@
                          (send button77 set-label "O")
                          (send button77 enable #f)
 			 (replaceInMatrix 7 7 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button78 (new button% [parent panel7]
      [label ""]
@@ -1042,7 +1120,8 @@
                          (send button78 set-label "O")
                          (send button78 enable #f)
 			 (replaceInMatrix 7 8 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button79 (new button% [parent panel7]
      [label ""]
@@ -1054,7 +1133,8 @@
                          (send button79 set-label "O")
                          (send button79 enable #f)
 			 (replaceInMatrix 7 9 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 
 
@@ -1074,7 +1154,8 @@
                          (send button80 set-label "O")
                          (send button80 enable #f)
 			 (replaceInMatrix 8 0 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button81 (new button% [parent panel8]
      [label ""]
@@ -1086,7 +1167,8 @@
                          (send button81 set-label "O")
                          (send button81 enable #f)
 			 (replaceInMatrix 8 1 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button82 (new button% [parent panel8]
      [label ""]
@@ -1098,7 +1180,8 @@
                          (send button82 set-label "O")
                          (send button82 enable #f)
 			 (replaceInMatrix 8 2 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button83 (new button% [parent panel8]
      [label ""]
@@ -1110,7 +1193,8 @@
                          (send button83 set-label "O")
                          (send button83 enable #f)
 			 (replaceInMatrix 8 3 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button84 (new button% [parent panel8]
      [label ""]
@@ -1122,7 +1206,8 @@
                          (send button84 set-label "O")
                          (send button84 enable #f)
 			 (replaceInMatrix 8 4 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button85 (new button% [parent panel8]
      [label ""]
@@ -1134,7 +1219,8 @@
                          (send button85 set-label "O")
                          (send button85 enable #f)
 			 (replaceInMatrix 8 5 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button86 (new button% [parent panel8]
      [label ""]
@@ -1146,7 +1232,8 @@
                          (send button86 set-label "O")
                          (send button86 enable #f)
 			 (replaceInMatrix 8 6 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button87 (new button% [parent panel8]
      [label ""]
@@ -1158,7 +1245,8 @@
                          (send button87 set-label "O")
                          (send button87 enable #f)
 			 (replaceInMatrix 8 7 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button88 (new button% [parent panel8]
      [label ""]
@@ -1170,7 +1258,8 @@
                          (send button88 set-label "O")
                          (send button88 enable #f)
 			 (replaceInMatrix 8 8 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button89 (new button% [parent panel8]
      [label ""]
@@ -1182,7 +1271,8 @@
                          (send button89 set-label "O")
                          (send button89 enable #f)
 			 (replaceInMatrix 8 9 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 
 ; Add a horizontal panel to the frame, with centering for buttons
@@ -1201,7 +1291,8 @@
                          (send button90 set-label "O")
                          (send button90 enable #f)
 			 (replaceInMatrix 9 0 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button91 (new button% [parent panel9]
      [label ""]
@@ -1213,7 +1304,8 @@
                          (send button91 set-label "O")
                          (send button91 enable #f)
 			 (replaceInMatrix 9 1 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button92 (new button% [parent panel9]
      [label ""]
@@ -1225,7 +1317,8 @@
                          (send button92 set-label "O")
                          (send button92 enable #f)
 			 (replaceInMatrix 9 2 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button93 (new button% [parent panel9]
      [label ""]
@@ -1237,7 +1330,8 @@
                          (send button93 set-label "O")
                          (send button93 enable #f)
 			 (replaceInMatrix 9 3 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button94 (new button% [parent panel9]
      [label ""]
@@ -1249,7 +1343,8 @@
                          (send button94 set-label "O")
                          (send button94 enable #f)
 			 (replaceInMatrix 9 4 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button95 (new button% [parent panel9]
      [label ""]
@@ -1261,7 +1356,8 @@
                          (send button95 set-label "O")
                          (send button95 enable #f)
 			 (replaceInMatrix 9 5 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button96 (new button% [parent panel9]
      [label ""]
@@ -1273,7 +1369,8 @@
                          (send button96 set-label "O")
                          (send button96 enable #f)
 			 (replaceInMatrix 9 6 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button97 (new button% [parent panel9]
      [label ""]
@@ -1285,7 +1382,8 @@
                          (send button97 set-label "O")
                          (send button97 enable #f)
 			 (replaceInMatrix 9 7 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button98 (new button% [parent panel9]
      [label ""]
@@ -1297,7 +1395,8 @@
                          (send button98 set-label "O")
                          (send button98 enable #f)
 			 (replaceInMatrix 9 8 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
 
 (define button99 (new button% [parent panel9]
      [label ""]
@@ -1309,7 +1408,8 @@
                          (send button99 set-label "O")
                          (send button99 enable #f)
 			 (replaceInMatrix 9 9 1)
-			 (search_Winner matrix))]))
+			 (search_Winner matrix)
+			 (computerMove (nextCpuMove matrix)))]))
   
 
 ; Initialize the interface
@@ -1942,6 +2042,7 @@
 		)	
 
 	)
+	(search_Winner matrix)
 )
 
 (define (memberOf element list2check)
@@ -1958,8 +2059,8 @@
 )
 
 (define (search_Winner matrix)
-     (pretty-print matrix)
-	(pretty-print (equal? (check_Winner matrix) 1))
+;     (pretty-print matrix)
+;	(pretty-print (equal? (check_Winner matrix) 1))
         (cond	((equal? (check_Winner matrix) 1) 
 		(winner 1)
 		)
@@ -1968,9 +2069,6 @@
 		)
                 ((not (memberOf #t (map memberOf baseChecklist matrix)))
                 (winner 0)
-                )
-                (else
-                (computerMove (nextCpuMove matrix))
                 )
 	)
 )
