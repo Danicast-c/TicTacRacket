@@ -1958,6 +1958,7 @@
 )
 
 (define (search_Winner matrix)
+     (pretty-print matrix)
 	(pretty-print (equal? (check_Winner matrix) 1))
         (cond	((equal? (check_Winner matrix) 1) 
 		(winner 1)

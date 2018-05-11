@@ -1,8 +1,8 @@
 #lang racket/gui
 
-(define test '((0 0 1)
-               (0 1 0)
-               (0 -1 0)))
+(define test '((1 1 -1)
+               (0 -1 1)
+               (-1 -1 1)))
 
 
 (define testh '((1 2 3 4 5)
