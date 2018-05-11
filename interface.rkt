@@ -2097,5 +2097,3 @@
 ; formula suponiendo que los botones estan ordenados como "button[x][y]": x*n + (y+1), siendo n la cantidad de filas
 
 ; La entrada del usuario es (TTT m n), con m siendo las columnas y n las filas
-
-(TTT 3 3)

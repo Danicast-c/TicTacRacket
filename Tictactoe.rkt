@@ -176,13 +176,16 @@
 (define (checkViability matrix i j)
   (cond
     ((equal? (horizontalScore matrix i) (- (length (car matrix)) 1)) -9999)
+    ((equal? (* -1 (horizontalScore matrix i)) (- (length (car matrix)) 1)) -99999)
     ((equal? (verticalScore matrix j) (- (length matrix) 1)) -9999)
+    ((equal? (* -1 (verticalScore matrix j)) (- (length matrix) 1)) -99999)
     (else (+ (horizontalScore matrix i) (verticalScore matrix j) (totalDiagonalScore matrix i j)))
   )
 )
 
 
 (define (scoreViability matrix)
+  (pretty-print  (qs (scoreViabilityAux matrix (getEmptySpaces matrix))))
   (qs (scoreViabilityAux matrix (getEmptySpaces matrix)))
 )
 
