@@ -29,8 +29,8 @@
 
 (define nt2 '((0 1 0 -1 1)
             (1 1 0 -1 0)
-            (0 0 0 0 0)
-            (1 0 1 -1 0))
+            (0 0 1 0 0)
+            (1 0 1 0 0))
   )
 
 ;; Funcion que Detecta Ganador
@@ -218,4 +218,84 @@
 
 (define (nextCpuMove matrix)
   (cdar (scoreViability matrix))
+)
+
+
+(define (getInvDiagonalsIndex matrix)
+  (getDiagonalsIndex (inverseMatrix matrix))
+  )
+
+
+(define (getDiagonalsIndex matrix)
+  (cond
+    ((< (length matrix) (length (car matrix))) (getDiagonalsIndexIrregularH matrix 0 (length (car matrix)) (length matrix)))
+    ((> (length matrix) (length (car matrix))) (getDiagonalsIndexIrregularV matrix 0 (length (car matrix)) (length matrix)))
+   ((equal? (length matrix) (length (car matrix))) (list (getDiagonalsIndexRegular matrix (length matrix) 0 0)))
+   )
+  )
+
+(define (getDiagonalsIndexRegular matrix len xpos ypos)
+  (cond
+    ((zero? len) '())
+    (else (cons (cons (+ (- len 1) ypos) (+ (- len 1) xpos)) (getDiagonalsIndexRegular matrix (- len 1) xpos ypos)))
+    )
+  )
+
+(define (getDiagonalsIndexIrregularH matrix index lenx leny)
+  (cond
+    ((< lenx (+ index leny)) '())
+    (else (cons (getDiagonalsIndexRegular matrix leny index 0) (getDiagonalsIndexIrregularH (corta_matrix matrix) (+ index 1) lenx leny)))
+  )
+)
+
+(define (getDiagonalsIndexIrregularV matrix index lenx leny)
+  (cond
+    ((< leny (+ index lenx)) '())
+    (else (cons (getDiagonalsIndexRegular matrix lenx 0 index) (getDiagonalsIndexIrregularV (cdr matrix) (+ index 1) lenx leny)))
+    )
+ )
+
+(define (diagonalScoreInv matrix)
+  (diagonalScoreAux matrix (getInvDiagonals matrix) (getInvDiagonalsIndex matrix))
+)
+
+(define (diagonalScore matrix)
+  (diagonalScoreAux matrix (getDiagonals matrix) (getDiagonalsIndex matrix))
+)
+
+(define (diagonalScoreAux matrix diagonals indexes)
+  (cond
+    ((empty? diagonals) '())
+    (else (append  (diagonalScoreSubAux matrix (sumaLista (car diagonals)) (car indexes)) (diagonalScoreAux matrix (cdr diagonals) (cdr indexes)) ))
+  )
+)
+
+(define (sumaLista lista)
+  (cond
+    ((empty? lista) 0)
+    (else (+ (car lista) (sumaLista (cdr lista))))
+  )
+)
+
+(define (diagonalScoreSubAux matrix score indexes)
+  (cond
+    ((empty? indexes) '())
+    ((equal? score (- (min (length matrix) (length (car matrix))) 1)) (cons (cons -9999 (car indexes)) (diagonalScoreSubAux matrix score (cdr indexes)))) 
+    (else (cons (cons score (car indexes)) (diagonalScoreSubAux matrix score (cdr indexes))))
+  )
+)
+
+(define (totalDiagonalScore matrix i j)
+  (+ (totalDiagonalScoreAux (diagonalScore matrix) i j) (totalDiagonalScoreAux (diagonalScoreInv matrix) i j))
+)
+
+(define (totalDiagonalScoreAux scores i j)
+  (cond
+    ((empty? scores) 0)
+    ((and
+      (equal? (cadar scores) i) (equal? (cddar scores) j))
+      (caar scores)
+    )
+    (else (totalDiagonalScoreAux (cdr scores) i j))
+  )
 )
