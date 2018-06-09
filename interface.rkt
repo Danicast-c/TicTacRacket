@@ -2,6 +2,7 @@
 
 (require "Tictactoe.rkt")
 
+; Matrix where the game values are going to be stored
 (define matrix '((0 0 0 0 0 0 0 0 0 0)
 		(0 0 0 0 0 0 0 0 0 0)
 		(0 0 0 0 0 0 0 0 0 0)
@@ -14,14 +15,16 @@
 		(0 0 0 0 0 0 0 0 0 0))
 )
 
+; Default row to operate when needed (values or size)
 (define baseChecklist '(0 0 0 0 0 0 0 0 0 0))
 
+; Frame where the game is played
 (define frame (new frame%
                    [label "TicTacRacket"]
                    [stretchable-width #t]
                    [stretchable-height #t]))
 
-; Results of the match
+; Interface Results of the match
 (define frameWinner (new frame%
                    [label "Match Result"]
                    [stretchable-width #t]
@@ -1212,7 +1215,7 @@
 			 (playerMove 9 9))]))
   
 
-; Initialize the interface
+; Initialize the interface. According to the input size, it erases the rows and columns needed.
 (define (TTT column row)
 	(cond 	((or (< column 3) (< row 3))
 		'(Entry error. Grid must be at least 3x3)
@@ -1437,6 +1440,7 @@
 	)
 )
 
+; Ananlyses the computer move receive from the intelligence and play accordingly. 
 (define (computerMove xy)
 	(replaceInMatrix (car xy) (cadr xy) -1)
 	(cond 	((and (equal? (car xy) 0) (equal? (cadr xy) 0))
@@ -1853,6 +1857,7 @@
 	(search_Winner matrix)
 )
 
+; Proper function implemented to check for a member in a list. 
 (define (memberOf element list2check)
 	(cond	((null? list2check)
 		#f
@@ -1866,6 +1871,7 @@
 	)
 )
 
+; Function that calls check_Winner to verify if the winning conditions have been met. In that case, declares the winner. 
 (define (search_Winner matrix)
 ;     (pretty-print matrix)
 ;	(pretty-print (equal? (check_Winner matrix) 1))
@@ -1887,6 +1893,7 @@
 	)
 )
 
+; Function to be called when the winner is chosen. It hides the game and displays the result interface 
 (define (winner num)
 	(cond 	((equal? num 1)
 		(send resultMessage set-label "				Jugador es el ganador")
